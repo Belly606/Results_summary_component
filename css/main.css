@@ -1,0 +1,183 @@
+:root {
+	--Light-red: hsla(0, 100%, 67%, 10%);
+	--Orangey-yellow: hsla(39, 100%, 56%, 10%);
+	--Green-teal: hsla(166, 100%, 37%, 10%);
+	--Cobalt-blue: hsla(234, 85%, 45%, 10%);
+	--Light-slate-blue-background: hsl(252, 100%, 67%);
+	--Light-royal-blue-background: hsl(241, 81%, 54%);
+	--Violet-blue-circle: hsla(256, 72%, 46%, 1);
+	--Persian-blue-circle: hsla(241, 72%, 46%, 0);
+	--Pale-blue: hsl(221, 100%, 96%);
+	--Light-lavender: hsl(241, 100%, 89%);
+	--Dark-gray-blue: hsl(224, 30%, 27%);
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	font-family: 'Hanken Grotesk', sans-serif;
+}
+main {
+	height: 100vh;
+}
+header {
+	min-height: 40%;
+	color: white;
+	text-align: center;
+	padding: 1em 3em;
+	border-bottom-left-radius: 1.2em;
+	border-bottom-right-radius: 1.2em;
+	background-image: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+header .result .heading {
+	color: var(--Light-lavender);
+	font-weight: 500;
+}
+header .result .num {
+	margin: 3em 0;
+	color: var(--Light-lavender);
+	position: relative;
+	z-index: 65;
+}
+header .result .num .image {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 9em;
+	height: 9em;
+	/* background-image: linear-gradient(to bottom, var(--violet-blue-circle), var(--Persian-blue-circle)); */
+	background-color: black;
+	z-index: -1;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+header .result .num span {
+	display: block;
+	font-weight: 800;
+	font-size: 4em;
+	color: white;
+}
+header .text h3 {
+	font-weight: 800;
+	font-size: 1.6em;
+}
+header .text p {
+	color: var(--Light-lavender);
+	line-height: 1.5;
+	margin: 1em 0 1.5em;
+}
+main .summary {
+	padding: 1.5em;
+}
+main .summary h4 {
+	color: var(--Dark-gray-blue);
+	font-size: 1.2em;
+	margin-bottom: 1.5em;
+}
+main .summary .stats > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2em .7em;
+	border-radius: .6em;
+	margin-bottom: 1em;
+}
+main .summary .stats .react{
+	background-color: var(--Light-red);
+	color: hsl(0, 100%, 67%);
+}
+main .summary .stats .memory {
+	background-color: var(--Orangey-yellow);
+	color: hsl(39, 100%, 56%);
+}
+main .summary .stats .verb {
+	background-color: var(--Green-teal);
+	color: hsl(166, 100%, 37%);
+}
+main .summary .stats .visual {
+	background-color: var(--Cobalt-blue);
+	color: hsl(234, 85%, 45%);
+	margin-bottom: 0;
+}
+main .summary .stats > div .stat {
+	display: flex;
+	align-items: center;
+	gap: .4em;
+	font-size: 1.3em;
+}
+main .summary .stats > div p {
+	font-weight: 700;
+	color: var(--Light-lavender);
+}
+main .summary .stats > div p span {
+	color: var(--Dark-gray-blue);
+}
+main .summary button {
+	margin: .7em 0;
+	width: 100%;
+	padding: .7em 0;
+	background-color: var(--Dark-gray-blue);
+	color: white;
+	font-weight: 700;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 3em;
+}
+.attribution { 
+	font-size: 11px;
+	text-align: center; 
+}
+.attribution a {
+	font-weight: 900;
+	text-decoration: none;
+	color: hsl(0, 100%, 67%);
+}
+@media (min-width: 900px) {
+	body {
+		display: grid;
+		place-items: center;
+	}
+	main {
+		display: flex;
+		height: 28em;
+		width: 40em;
+		box-shadow: 0px -1px 24px -3px rgba(0,0,0,0.4);
+		-webkit-box-shadow: 0px -1px 24px -3px rgba(0,0,0,0.4);
+		-moz-box-shadow: 0px -1px 24px -3px rgba(0,0,0,0.4);
+		border-radius: 1.2em;
+		-webkit-border-radius: 1.2em;
+		-moz-border-radius: 1.2em;
+		-ms-border-radius: 1.2em;
+		-o-border-radius: 1.2em;
+}
+	main header {
+		width: 50%;
+		border-radius: 1.2em;
+		-webkit-border-radius: 1.2em;
+		-moz-border-radius: 1.2em;
+		-ms-border-radius: 1.2em;
+		-o-border-radius: 1.2em;
+}
+	main header .result .num .image {
+		background-image: linear-gradient(top bottom, var(--Violet-blue-circle), var(--Persian-blue-circle));
+	}
+	main .summary {
+		width: 50%;
+	}
+	.attribution {
+		position: absolute;
+		top: 80%;
+	}
+}
